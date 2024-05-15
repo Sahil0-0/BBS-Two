@@ -43,23 +43,26 @@ const MainPage = () => {
           borderTopRadius={"16px"}
           borderBottomRadius={"null"}
         >
-          <Stack gap={"24px"}>
-            <Box px={"8px"} pt={"8px"}>
-              <Button
-                leftIcon={<DropDownArrowBlack />}
-                fontWeight={"bold"}
-                borderRadius={"full"}
-                variant={"outline"}
-                borderColor={"black"}
-                pos={"relative"}
-                z-index={3}
-              >
-                Back
-              </Button>
-
-              
-                <Img src={sectionOneImage} boxSize={"auto"}></Img>
-              
+          <Stack gap={"24px"} z-index={3}>
+            <Box
+              mt={"8px"}
+              mx={"8px"}
+              bgImage={sectionOneImage}
+              h={"210px"}
+              borderRadius={"12px"}
+            >
+              <Box pt={'12px'} pl={'12px'}>
+                <Button
+                  leftIcon={<DropDownArrowBlack />}
+                  fontWeight={"bold"}
+                  borderRadius={"full"}
+                  variant={"outline"}
+                  bgColor={"white"}
+                  borderColor={"black"}
+                >
+                  Back
+                </Button>
+              </Box>
             </Box>
 
             <Box px={"24px"} py={"16px"}>
