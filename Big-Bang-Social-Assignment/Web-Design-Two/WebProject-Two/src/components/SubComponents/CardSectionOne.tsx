@@ -13,7 +13,28 @@ const Card2 = () => {
       borderWidth={"1px"}
       borderColor={"E2E2E2"}
       variant={"outline"}
+      position={"relative"}
     >
+      <Card
+        position={"absolute"}
+        top={1}
+        left={2}
+        zIndex={2}
+        px={"6px"}
+        py={"2px"}
+        borderRadius={"full"}
+        borderColor={"#A4A4A4"}
+      >
+        <Text
+          fontWeight={"regular"}
+          fontStyle={"Montserrat"}
+          fontSize={"12px"}
+          textColor={"#6C5606"}
+        >
+          Alpha Creator
+        </Text>
+      </Card>
+
       <Stack direction={"row"} justifyContent={"space-between"}>
         <Box>
           <Card
@@ -26,38 +47,36 @@ const Card2 = () => {
             variant={"outline"}
           >
             <Stack gap={"12px"}>
-              
-                <Box className={"profile image"}>
-                  <HStack gap={"8px"}>
-                    <ProfilePicSmaller />
-                    <Stack gap={"null"}>
-                      <Text
-                        fontWeight={"regular"}
-                        fontStyle={"Montserrat"}
-                        fontSize={"14px"}
-                        textColor={"Black"}
-                      >
-                        Sahil Singh
-                      </Text>
-                      <Text
-                        fontWeight={"regular"}
-                        fontStyle={"Montserrat"}
-                        fontSize={"12px"}
-                        textColor={"#808080"}
-                      >
-                        @sahill.0_0
-                      </Text>
-                    </Stack>
-                  </HStack>
-                </Box>
+              <Box className={"profile image"}>
+                <HStack gap={"8px"}>
+                  <ProfilePicSmaller />
+                  <Stack gap={"null"}>
+                    <Text
+                      fontWeight={"regular"}
+                      fontStyle={"Montserrat"}
+                      fontSize={"14px"}
+                      textColor={"Black"}
+                    >
+                      Sahil Singh
+                    </Text>
+                    <Text
+                      fontWeight={"regular"}
+                      fontStyle={"Montserrat"}
+                      fontSize={"12px"}
+                      textColor={"#808080"}
+                    >
+                      @sahill.0_0
+                    </Text>
+                  </Stack>
+                </HStack>
+              </Box>
 
-                <Box>
-                  <HStack gap={'10px'}>
-                    <InstaLogoFilled />
-                    <InstaLogoFilled />
-                  </HStack>
-                </Box>
-              
+              <Box>
+                <HStack gap={"10px"}>
+                  <InstaLogoFilled />
+                  <InstaLogoFilled />
+                </HStack>
+              </Box>
             </Stack>
           </Card>
         </Box>
