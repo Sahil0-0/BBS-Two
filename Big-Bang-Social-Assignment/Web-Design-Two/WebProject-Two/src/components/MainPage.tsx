@@ -5,6 +5,7 @@ import {
   Divider,
   Flex,
   HStack,
+  Img,
   Input,
   InputGroup,
   InputLeftElement,
@@ -28,13 +29,13 @@ import SearchIcon from "../assets/icon-component/SearchIcon";
 import FilterIcon from "../assets/icon-component/FilterIcon";
 import CloseCircleIcon from "../assets/icon-component/CloseCircleIcon";
 import CardSectionOne from "./SubComponents/CardSectionOne";
-
+import sectionOneImage from "../assets/icons/bgImage.png";
 
 const MainPage = () => {
   return (
     <Box>
       <Stack direction={"row"} gap={"12px"}>
-        <Flex
+        <Box
           className={"MainSectionOne"}
           w={"30%"}
           border={"2px"}
@@ -42,25 +43,23 @@ const MainPage = () => {
           borderTopRadius={"16px"}
           borderBottomRadius={"null"}
         >
-          <Box flex="1">
-            <Box>
-              <Box
-                width={"100%"}
-                h={"210px"}
-                px={"8px"}
-                pt={"8px"}
-                overflow={"hidden"}
+          <Stack gap={"24px"}>
+            <Box px={"8px"} pt={"8px"}>
+              <Button
+                leftIcon={<DropDownArrowBlack />}
+                fontWeight={"bold"}
+                borderRadius={"full"}
+                variant={"outline"}
+                borderColor={"black"}
+                pos={"relative"}
+                z-index={3}
               >
-                <Button
-                  leftIcon={<DropDownArrowBlack />}
-                  fontWeight={"bold"}
-                  borderRadius={"full"}
-                  variant={"outline"}
-                  borderColor={"black"}
-                >
-                  Back
-                </Button>
-              </Box>
+                Back
+              </Button>
+
+              
+                <Img src={sectionOneImage} boxSize={"auto"}></Img>
+              
             </Box>
 
             <Box px={"24px"} py={"16px"}>
@@ -373,8 +372,8 @@ const MainPage = () => {
                 </Box>
               </Stack>
             </Box>
-          </Box>
-        </Flex>
+          </Stack>
+        </Box>
 
         <Flex
           //this is for th second section of the main page
